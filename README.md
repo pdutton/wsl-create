@@ -13,6 +13,9 @@ them run the build script.
 
  :exclamation: Use your own values please. And don't use changeme. I call dibs on that password!
 
+Files you place in the ssh subdirectory will be copied into the ~/.ssh directory of the created user.
+id_rsa and id_rsa.pub are a prime candidate for this functionality.
+
 ## Import into WSL
 
 In powershell, create a directory where the container will live:
