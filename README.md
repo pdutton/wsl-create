@@ -1,5 +1,5 @@
-# wsl-template
-Template for generating containers to run under WSL.
+# wsl-rocky
+RockyLinux with go for WSL.
 
 ## Build the tarball:
 
@@ -12,18 +12,15 @@ them run the build script.
 
  :exclamation: Use your own values please. And don't use changeme. I call dibs on that password!
 
-Files you place in the ssh subdirectory will be copied into the ~/.ssh directory of the created user.
-id_rsa and id_rsa.pub are a prime candidate for this functionality.
-
 ## Import into WSL
 
 In powershell, create a directory where the container will live:
 
-`mkdir C:\WSLDistros\[ContainerName]`
+`mkdir C:\WSLDistros\RockyLinux`
 
 Then import the new tarball:
 
-`wsl --import [ContainerName] C:\WSLDistros\[ContainerName] ./TEMPLATE-wsl.tar`
+`wsl --import RockyLinux C:\WSLDistros\RockyLinux ./rocky-wsl.tar`
 
 
 ## TODO
