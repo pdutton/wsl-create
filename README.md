@@ -1,5 +1,5 @@
-# wsl-template
-Template for generating containers to run under WSL.
+# wsl-debian
+Generate Debian containers to run under WSL running go.
 
 ## Build the tarball:
 
@@ -19,11 +19,11 @@ id_rsa and id_rsa.pub are a prime candidate for this functionality.
 
 In powershell, create a directory where the container will live:
 
-`mkdir C:\WSLDistros\[ContainerName]`
+`mkdir C:\WSLDistros\Debian`
 
 Then import the new tarball:
 
-`wsl --import [ContainerName] C:\WSLDistros\[ContainerName] ./TEMPLATE-wsl.tar`
+`wsl --import Debian C:\WSLDistros\Debian ./debian-wsl.tar`
 
 
 ## TODO
