@@ -1,5 +1,6 @@
 # wsl-template
 Template for generating containers to run under WSL.
+See the alpine, debian, or rocky branches for specific instances.
 
 ## Build the tarball:
 
