@@ -5,7 +5,6 @@ GREP=/usr/bin/grep
 AWK=/usr/bin/awk
 
 OS=TEMPLATE
-VERSION=latest
 IMAGE_NAME=${OS}-wsl
 WSL_TAR=${OS}-wsl.tar
 
@@ -15,6 +14,7 @@ $DOCKER image build --squash \
 	--build-arg "PASSWORD=${PASSWORD:?PASSWORD is required}" \
 	--build-arg "EMAIL=${EMAIL:?EMAIL is required}" \
 	--build-arg "FULLNAME=${FULLNAME:?FULLNAME is required}" \
+	--build-arg "VERSION=${VERSION:-latest}" \
 	--tag "$IMAGE_NAME" .
 
 echo Creating Container
