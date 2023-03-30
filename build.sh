@@ -1,5 +1,8 @@
 #/bin/sh
 
+echo "This is a template.  You must run from one of the concrete branches."
+exit
+
 DOCKER=/usr/bin/podman
 GREP=/usr/bin/grep
 AWK=/usr/bin/awk
