@@ -7,7 +7,7 @@ See the alpine, debian, or rocky branches for specific instances.
 Set some environment variables for the user you want to use in the wsl container, and
 them run the build script.  
 
-`USER=pdutton PASSWORD=changeme EMAIL=pdutton@exaple.com FULLNAME='Peter Dutton' ./build.sh` 
+`USER=pdutton PASSWORD=changeme EMAIL=pdutton@example.com FULLNAME='Peter Dutton' ./build.sh` 
 
  :grey_exclamation: USER is probably already set to your current username.
 
