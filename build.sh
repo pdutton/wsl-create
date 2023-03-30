@@ -5,6 +5,7 @@ GREP=/usr/bin/grep
 AWK=/usr/bin/awk
 
 OS=TEMPLATE
+VERSION=latest
 IMAGE_NAME=${OS}-wsl
 WSL_TAR=${OS}-wsl.tar
 
