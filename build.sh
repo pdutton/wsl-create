@@ -15,6 +15,8 @@ $DOCKER image build --squash \
 	--build-arg "EMAIL=${EMAIL:?EMAIL is required}" \
 	--build-arg "FULLNAME=${FULLNAME:?FULLNAME is required}" \
 	--build-arg "VERSION=${VERSION:-bullseye}" \
+	--build-arg "GO_VERSION=${GO_VERSION:-1.20.2}" \
+	--build-arg "GO_ARCH=${GO_ARCH:-amd64}" \
 	--tag "$IMAGE_NAME" .
 
 echo Creating Container

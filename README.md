@@ -31,7 +31,7 @@ Then import the new tarball:
   - [X] Add git config values based on user.
   - [X] Add the ability to set the ssh id for the new user so that you can automatically log into things like git.
   - [ ] Add support for encrypted input password.
-  - [ ] Add go
+  - [X] Add go
 
 
 
