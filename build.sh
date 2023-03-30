@@ -9,34 +9,16 @@ VERSION=latest
 IMAGE_NAME=${OS}-wsl
 WSL_TAR=${OS}-wsl.tar
 
-if [[ -z "${USER}" ]]; then
-        echo USER environment variable required.
-        exit 1
-fi
-if [[ -z "${PASSWORD}" ]]; then
-        echo PASSWORD environment variable required.
-        exit 1
-fi
-if [[ -z "${FULLNAME}" ]]; then
-        echo FULLNAME environment variable required.
-        exit 1
-fi
-if [[ -z "${EMAIL}" ]]; then
-        echo EMAIL environment variable required.
-        exit 1
-fi
-
 echo Creating Image
 $DOCKER image build --squash \
-	--build-arg "USER=$USER" \
-	--build-arg "PASSWORD=$PASSWORD" \
-	--build-arg "EMAIL=$EMAIL" \
-	--build-arg "FULLNAME=$FULLNAME" \
+	--build-arg "USER=${USER:?USER is required}" \
+	--build-arg "PASSWORD=${PASSWORD:?PASSWORD is required}" \
+	--build-arg "EMAIL=${EMAIL:?EMAIL is required}" \
+	--build-arg "FULLNAME=${FULLNAME:?FULLNAME is required}" \
 	--tag "$IMAGE_NAME" .
 
 echo Creating Container
-# TIP: Add '-it' after run to ease debugging.
-$DOCKER run $IMAGE_NAME
+$DOCKER run ${DEBUG:+-it} $IMAGE_NAME
 
 echo Determining ID
 ID=$($DOCKER container ls -a | $GREP -i $IMAGE_NAME | $AWK '{print $1}')

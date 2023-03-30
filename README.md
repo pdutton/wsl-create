@@ -1,5 +1,5 @@
 # wsl-template
-Template for generating containers to run under WSL
+Template for generating containers to run under WSL.
 
 ## Build the tarball:
 
