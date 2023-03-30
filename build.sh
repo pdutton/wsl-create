@@ -15,6 +15,7 @@ $DOCKER image build --squash \
 	--build-arg "EMAIL=${EMAIL:?EMAIL is required}" \
 	--build-arg "FULLNAME=${FULLNAME:?FULLNAME is required}" \
 	--build-arg "VERSION=${VERSION:-latest}" \
+	--build-arg "ID=${ID}" \
 	--tag "$IMAGE_NAME" .
 
 echo Creating Container
