@@ -4,7 +4,7 @@ DOCKER=/usr/bin/podman
 GREP=/usr/bin/grep
 AWK=/usr/bin/awk
 
-OS=rocky
+OS=centos
 IMAGE_NAME=${OS}-wsl
 WSL_TAR=${OS}-wsl.tar
 
@@ -14,7 +14,7 @@ $DOCKER image build --squash \
 	--build-arg "PASSWORD=${PASSWORD:?PASSWORD is required}" \
 	--build-arg "EMAIL=${EMAIL:?EMAIL is required}" \
 	--build-arg "FULLNAME=${FULLNAME:?FULLNAME is required}" \
-	--build-arg "VERSION=${VERSION:-9}" \
+	--build-arg "VERSION=${VERSION:-7}" \
 	--build-arg "GO_VERSION=${GO_VERSION:-1.20.2}" \
 	--build-arg "GO_ARCH=${GO_ARCH:-amd64}" \
 	--tag "$IMAGE_NAME" .

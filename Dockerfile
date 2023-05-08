@@ -1,6 +1,6 @@
-ARG VERSION=9
+ARG VERSION=7
 
-FROM rockylinux:$VERSION
+FROM centos:$VERSION
 
 ARG USER
 ARG PASSWORD
@@ -11,9 +11,9 @@ ARG GO_ARCH=amd64
 
 ADD https://go.dev/dl/go${GO_VERSION}.linux-${GO_ARCH}.tar.gz /tmp
 
-RUN dnf upgrade -y
-RUN dnf group install -y 'Development Tools'
-RUN dnf install -y git sudo
+RUN yum upgrade -y
+RUN yum group install -y 'Development Tools'
+RUN yum install -y git sudo
 RUN useradd -c "$FULLNAME" -s /bin/bash --user-group --groups wheel $USER
 RUN echo "$USER:$PASSWORD" | chpasswd
 RUN echo -e "[user]\ndefault=$USER" > /etc/wsl.conf

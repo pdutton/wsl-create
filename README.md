@@ -1,5 +1,5 @@
 # wsl-rocky
-RockyLinux with go for WSL.
+CentOS 7 with go for WSL.
 
 ## Build the tarball:
 
@@ -19,11 +19,11 @@ id_rsa and id_rsa.pub are a prime candidate for this functionality.
 
 In powershell, create a directory where the container will live:
 
-`mkdir C:\WSLDistros\RockyLinux`
+`mkdir C:\WSLDistros\CentOS`
 
 Then import the new tarball:
 
-`wsl --import RockyLinux C:\WSLDistros\RockyLinux ./rocky-wsl.tar`
+`wsl --import CentOS7 C:\WSLDistros\CentOS7 ./centos-wsl.tar`
 
 
 ## TODO
