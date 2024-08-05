@@ -1,6 +1,6 @@
 ARG VERSION=alpine
 
-FROM golang:$VERSION
+FROM docker.io/library/golang:$VERSION
 
 ARG USER
 ARG PASSWORD
