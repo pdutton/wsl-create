@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 DOCKER=/usr/bin/podman
 GREP=/usr/bin/grep
