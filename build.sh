@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 DOCKER=/usr/bin/podman
 GREP=/usr/bin/grep
@@ -14,8 +14,8 @@ $DOCKER image build --squash \
 	--build-arg "PASSWORD=${PASSWORD:?PASSWORD is required}" \
 	--build-arg "EMAIL=${EMAIL:?EMAIL is required}" \
 	--build-arg "FULLNAME=${FULLNAME:?FULLNAME is required}" \
-	--build-arg "VERSION=${VERSION:-bullseye}" \
-	--build-arg "GO_VERSION=${GO_VERSION:-1.20.2}" \
+	--build-arg "VERSION=${VERSION:-bookworm}" \
+	--build-arg "GO_VERSION=${GO_VERSION:-1.23.5}" \
 	--build-arg "GO_ARCH=${GO_ARCH:-amd64}" \
 	--tag "$IMAGE_NAME" .
 
