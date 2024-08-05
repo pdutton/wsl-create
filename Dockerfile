@@ -1,6 +1,6 @@
 ARG VERSION=9
 
-FROM rockylinux:$VERSION
+FROM docker.io/library/rockylinux:$VERSION
 
 ARG USER
 ARG PASSWORD
